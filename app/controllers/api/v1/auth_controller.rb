@@ -3,21 +3,30 @@ class Api::V1::AuthController < ApplicationController
 
   # login
   def create
-    @user = User.find_by(username: user_login_params[:username])
+    @user = User.find_by(email: user_login_params[:email])
     #User#authenticate comes from BCrypt
-    if @user && @user.authenticate(user_login_params[:password])
+    #TODO: add google auth token verification
+    if @user
       # encode token comes from ApplicationController
       token = encode_token({ user_id: @user.id })
       render json: { user: UserSerializer.new(@user), jwt: token }, status: :accepted
     else
-      render json: { message: 'Invalid username or password' }, status: :unauthorized
+      # if params[:token] === valid 
+         user = User.create(user_params)
+        # else
+        token = encode_token({ user_id: user.id })
+        render json: { user: UserSerializer.new(user), jwt: token }, status: :accepted
+      # render json: { message: 'Invalid username or password' }, status: :unauthorized
     end
   end
 
   private
 
   def user_login_params
-    params.require(:user).permit(:username, :password)
-    
+    params.require(:user).permit(:name, :email, :image_url, :token)
   end
+
+    def user_params 
+        params.require(:user).permit( :name, :email, :image_url)
+    end
 end
