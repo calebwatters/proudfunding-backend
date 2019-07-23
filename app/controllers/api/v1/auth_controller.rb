@@ -7,6 +7,7 @@ class Api::V1::AuthController < ApplicationController
     #User#authenticate comes from BCrypt
     #TODO: add google auth token verification
     if @user
+      # byebugclea
       # encode token comes from ApplicationController
       token = encode_token({ user_id: @user.id })
       render json: { user: UserSerializer.new(@user), jwt: token }, status: :accepted

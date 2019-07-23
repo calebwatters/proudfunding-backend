@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-    skip_before_action :authorized
+    # skip_before_action :authorized
     def index 
         users = User.all 
         render json: users
