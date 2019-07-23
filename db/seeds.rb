@@ -3,16 +3,55 @@ Project.destroy_all
 Product.destroy_all
 CartItem.destroy_all
 
-5.times do 
-    name = Faker::FunnyName.name
-    user = User.create(name: name, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
-    company_name = Faker::Company.name
-    title = Faker::Commerce.product_name
-    goal = 100000
-    current = 1029
-    image_url1 = 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg'
-    project = Project.create(title: title, description: "desc. example..." , company_name: company_name, company_url: 'example.com', image1_url: image_url1, image2_url: image_url1, image3_url: image_url1, user_id: user.id)
-    product = Product.create(name: title, description: "desc. example...", project_id: project.id, image1_url: image_url1, image2_url: image_url1, image3_url: image_url1, price: 1000)
-end
 
+    name1 = Faker::FunnyName.name
+    user1 = User.create(name: name1, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+    company_name1 = 'Sonny'
+    title1 = "Sonny: A Portable Bidet for Eco-Conscious Humans"
+    goal1 = 10000
+    current1 = 210
+    project1 = Project.create(funding_goal: goal1, current_funding: current1, title: title1, description: "Beautiful design meets premium construction in a portable bidet that you can take everywhere! Developed for the healthy, hygiene-conscious and environmentally aware lifestyle, Sonny helps reduce your environmental burden while increasing your personal cleanliness. Elevate your bathroom routine for an effective, intimate, refreshing cleanse. " , company_name: company_name1, company_url: 'example.com', image1_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/fcapmxavscvpyutyoh8y", image2_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/yo4yaqcptzbhuhikiaso", image3_url: "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/qa5ig0e9x8yjmyb1yyxq", user_id: user1.id)
+    product1 = Product.create(name: title1, description: "Beautiful design meets premium construction in a portable bidet that you can take everywhere! Developed for the healthy, hygiene-conscious and environmentally aware lifestyle, Sonny helps reduce your environmental burden while increasing your personal cleanliness. Elevate your bathroom routine for an effective, intimate, refreshing cleanse. ", project_id: project1.id, image1_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/yo4yaqcptzbhuhikiaso", image2_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/asp5xyzr2qhuweby1cxl", image3_url: "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/qa5ig0e9x8yjmyb1yyxq", price: 250)
 
+        #  ------------------------------------------------------------------
+    name2 = Faker::FunnyName.name
+    user2 = User.create(name: name2, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+
+    project2 = Project.create(funding_goal: 20000, current_funding: 5000, title: 'Argon Transform - Make any motorcycle helmet smart', description: "Unmatched functionality, advanced technology, and quick access to GPS, music, and calls to upgrade any ordinary motorcycle helmet. Argon Transform makes safer, smarter riding easy." , company_name: 'Argon Transform', company_url: 'example.com', image1_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/vhmgjqrxidfsgdiyjhes", image2_url: "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/dd5n69gtsnqift9qy3tu", image3_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/mbfilzwvrhpjx0ybk8ys", user_id: user2.id)
+    product2 = Product.create(name: 'Argon Transform - Make any motorcycle helmet smart', description: "Unmatched functionality, advanced technology, and quick access to GPS, music, and calls to upgrade any ordinary motorcycle helmet. Argon Transform makes safer, smarter riding easy.", project_id: project2.id, image1_url: "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/qmujuliljwwfcrbgaoro", image2_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/vhmgjqrxidfsgdiyjhes", image3_url: "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/dd5n69gtsnqift9qy3tu", price: 399)
+    #  ------------------------------------------------------------------
+
+    name3 = Faker::FunnyName.name
+    user3 = User.create(name: name3, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+
+    project3 = Project.create(funding_goal: 15000, current_funding: 13000, title: 'Lua, the smart planter with feelings!', description: "Lua is designed to turn your plant into a pet. Using sensors, the smart planter triggers 15 different universal animated emotions.It measures soil’s moisture, light exposure and temperature to keep your houseplant alive and well.Lua’s app is easy to set up and use daily: the app generates a QR code that Lua can read and interpret right away!" , company_name: 'ESCH-SUR-ALZETTE', company_url: 'example.com', image1_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/vs4q75hnhrxq7osum49e", image2_url: "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/sbhao4hjs9q97zdnpdxd", image3_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/uvcb0po27yyvrlzgche6", user_id: user3.id)
+    product3 = Product.create(name: 'Lua, the smart planter with feelings!', description: "Turn your plant into a pet thanks to Lua: the cheerful plant monitor!", project_id: project3.id, image1_url: "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/sbhao4hjs9q97zdnpdxd", image2_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/uvcb0po27yyvrlzgche6", image3_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/vs4q75hnhrxq7osum49e", price: 399)
+    #  ------------------------------------------------------------------
+
+     name4 = Faker::FunnyName.name
+    user4 = User.create(name: name4, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+
+    project4 = Project.create(funding_goal: 15000, current_funding: 13000, title: "Wicked Ball - Your Pet's Joy when Home Alone", description: "A smart ball to keep your pet happy all day long." , company_name: 'Cheerble', company_url: 'example.com', image1_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/qsvsakqak1qdb6du89rl", image2_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/b79sdvuxgi5qwyj0wr5k", image3_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/xpl8o3ezcr7fahwdj4lg", user_id: user4.id)
+    product4 = Product.create(name: 'Wicked Ball', description: "Wicked Ball - Your Pet's Joy when Home Alone. A smart ball to keep your pet happy all day long.", project_id: project4.id, image1_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/b79sdvuxgi5qwyj0wr5k", image2_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/xpl8o3ezcr7fahwdj4lg", image3_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/ogqh0bw94403gcqxi5ps", price: 41)
+    
+    # #  ------------------------------------------------------------------
+
+         name5 = Faker::FunnyName.name
+    user5 = User.create(name: name5, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+
+    project5 = Project.create(funding_goal: 90843, current_funding: 34564, title: 'SPINN - The perfect camera carrying system', description: "Be always ready to shoot instantly and carry your camera bombproof. Tripod mount included." , company_name: 'SPINN.DESIGN', company_url: 'example.com', image1_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/dyhl4pdotfgkqzwta5ii", image2_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/i8rjoxc6nzcwqf2fwacl", image3_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/ehodytqxsaesh2hbkcii", user_id: user5.id)
+    product5 = Product.create(name: 'SPINN', description: "The perfect camera carrying system", project_id: project5.id, image1_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/ovwrunmmp3nequgk4jll", image2_url: "https://c3.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/zz6trch3llnrxvuehivc", image3_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/i8rjoxc6nzcwqf2fwacl", price: 50)
+    # #  ------------------------------------------------------------------
+
+         name6 = Faker::FunnyName.name
+    user6 = User.create(name: name3, image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+
+    project6 = Project.create(funding_goal:93485, current_funding: 45673, title: 'YoYoFactory 888 forever Yo-Yo', description: "Titanium yo-yo with patented side bearing technology." , company_name: 'YoYoFactory', company_url: 'example.com', image1_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/gq2dzpmckj3ksfp1x4wn", image2_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/jqkngg1vfkre73nzzc7x", image3_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/szynajke99yc2zyapbgh", user_id: user6.id)
+    product6 = Product.create(name: 'Forever Yo-Yo', description: "Titanium yo-yo with patented side bearing technology.", project_id: project6.id, image1_url: "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/yadvzhs4tuwskvwldpim", image2_url: "https://c0.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/jqkngg1vfkre73nzzc7x", image3_url: "https://c2.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fill,w_695,g_auto,q_auto,dpr_2.0,f_auto,h_460/gq2dzpmckj3ksfp1x4wn", price: 200)
+
+    # #  ------------------------------------------------------------------
+    #      name7 = Faker::FunnyName.name
+    # user7 = User.create(name: '', image_url: 'https://wolper.com.au/wp-content/uploads/2017/10/image-placeholder.jpg', email: 'email@example.com')
+
+    # project7 = Project.create(funding_goal: 983247, current_funding: 34566, title: '', description: "" , company_name: '', company_url: 'example.com', image1_url: "", image2_url: "", image3_url: "", user_id: user7.id)
+    # product7 = Product.create(name: '', description: "", project_id: project7.id, image1_url: "", image2_url: "", image3_url: "", price: 399)
