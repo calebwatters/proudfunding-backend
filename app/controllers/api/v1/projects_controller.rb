@@ -8,7 +8,8 @@ class Api::V1::ProjectsController < ApplicationController
     def create
         project = Project.new(project_params)
 
-        if project.save 
+        if project.save
+            project.update(current_funding: 0)
             render json: project 
         else
             render json: {message: 'There was an issue with your project submission'}
