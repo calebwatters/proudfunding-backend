@@ -21,10 +21,16 @@ class Api::V1::ProjectsController < ApplicationController
         render json: project
     end
 
+    def update
+        project = Project.find(params[:id])
+        project.update(project_params)
+        render json: project
+    end
+
     private 
 
     def project_params
-        params.require(:project).permit(:title, :description, :image1_url, :image2_url, :image3_url, :company_name, :company_url, :user_id, :funding_goal)
+        params.require(:project).permit(:title, :description, :image1_url, :image2_url, :image3_url, :company_name, :company_url, :user_id, :funding_goal, :current_funding)
     end
 
 end
