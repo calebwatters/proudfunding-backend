@@ -1,5 +1,5 @@
 class Api::V1::CartItemsController < ApplicationController
-    skip_before_action :authorized
+    # skip_before_action :authorized
     def index 
         cart_items = CartItem.all 
         render json: cart_items
